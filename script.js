@@ -1,8 +1,8 @@
 const BtnChooseGreens = document.getElementById('chooseGreens');
+const HAShover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-function checkScreenSize() {
  
-  if (window.matchMedia("(max-width: 768px)").matches) {
+  if (HAShover != true) {
     
 BtnChooseGreens.addEventListener('click', () => {
     BtnChooseGreens.classList.add('chooseGreensActive');
@@ -21,6 +21,6 @@ BtnChooseGreens.addEventListener('click', () => {
     }, 1000);
 })
   }
-}
 
-checkScreenSize();
+
+ 
