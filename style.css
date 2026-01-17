@@ -1,40 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@media (min-width: 1024px) {
-    .image-box {
-        aspect-ratio: 16 / 9;
-    }
-
-    .burger {
-        display: none;
-    }
-}
-
-@media (max-width: 1023px) {
-    .image-box {
-        aspect-ratio: 16 / 9;
-    }
-
-    .burger {
-        display: flex;
-    }
-    
-   .header {
-    position: relative;
-   }
-
-    .navigation {
-        display: none;
-    }
-    
-
-
-}
 
 * {
     margin: 0%;
     padding: 0%;
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
+    
 }
 
 .backgroundImg {
@@ -42,19 +13,18 @@
     background-size: cover;
     background-position: center;
     color: white;
+    padding-bottom: clamp(30px, 2vw, 100px);
 }
 
 .nav {
-      display: flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding-block: clamp(16px, 3vw, 32px);
 }
 
 .nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: none;
     list-style-type: none;
     gap: clamp(12px, 2vw, 32px);
     color: white;
@@ -63,12 +33,13 @@
 }
 
 .logo {
-    height: clamp(32px, 2vw, 56px);
+    height: clamp(32px, 3vw, 56px);
     width: auto;
 }
 
 .burger {
-background: none;
+  display: flex;
+  background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
@@ -95,6 +66,30 @@ background: none;
 
 .container {
   max-width: 1200px;
+ 
   margin-inline: auto;
   padding-inline: clamp(30px, 4vw, 32px);
+}
+
+.chooseGreens {
+    max-width: 200px;
+    font-size: clamp(12px, 2vw, 16px);
+    padding: clamp(7px, 1.5vw, 18px);
+    padding-left: clamp(15px, 1.5vw, 35px);
+    padding-right: clamp(15px, 1.5vw, 35px);
+    border-radius: 40px;
+    border: none;
+    background-color: #50a354;
+    color: white;
+}
+
+@media (min-width: 1024px) {
+
+    .burger {
+        display: none;
+    }
+
+    .nav ul {
+        display: flex;
+    }
 }
