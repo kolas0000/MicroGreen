@@ -83,6 +83,20 @@
     color: white;
 }
 
+.chooseGreensActive{
+    animation-duration: 1s;
+    animation-name: btnActive;
+}
+
+  @keyframes btnActive {
+    0% { transform: scale(1);
+    background-color: #50a354; }
+    50% { transform: scale(1.1);
+     background-color: #39b840; }
+    100% { transform: scale(1);
+    background-color: #50a354; }
+  }
+
 @media (min-width: 1024px) {
 
     .burger {
